@@ -1,0 +1,41 @@
+version: "3.1"
+
+services:
+  blokit_mysql:
+    container_name: blokit_mysql
+    image: mysql:latest
+    networks:
+      - blokit_network
+    volumes:
+      - ./mysql:/var/lib/mysql
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: "root"
+      MYSQL_DATABASE: "blokit"
+      MYSQL_USER: "blokit_user"
+      MYSQL_PASSWORD: "blokit_password"
+      
+  blokit_wp:
+    container_name: blokit_wp
+    image: wordpress:latest
+    networks:
+      - blokit_network
+    volumes:
+      - ./wordpress/:/var/www/html
+      - ./:/var/www/html/wp-content/plugins/blokit
+    ports:
+      - 80:80
+    links:
+      - blokit_mysql
+    environment:
+      APACHE_DOC_ROOT: "var/www/html"
+      WORDPRESS_DB_HOST: "blokit_mysql"
+      WORDPRESS_DB_USER: "blokit_user"
+      WORDPRESS_DB_PASSWORD: "blokit_password"
+      WORDPRESS_DB_NAME: "blokit"
+      WORDPRESS_DB_PREFIX: "blokit_"
+
+networks:
+  blokit_network:
+

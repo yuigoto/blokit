@@ -1,0 +1,30 @@
+import { __ } from "@wordpress/i18n";
+
+import Info from "./info.json";
+import Edit from "./edit";
+import Save from "./save";
+import "./editor.scss";
+import "./style.scss";
+
+const {
+  title,
+  description,
+  name,
+  category,
+  keywords,
+  attributes,
+  icon
+} = Info;
+
+const config = {
+  title: __( title, "#{NAMESPACE}" ),
+  description: __( description, "#{NAMESPACE}" ),
+  category,
+  icon,
+  keywords,
+  attributes,
+  edit: Edit,
+  save: Save
+};
+
+export { name, config };

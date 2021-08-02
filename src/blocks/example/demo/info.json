@@ -1,0 +1,18 @@
+{
+  "name": "yuiti/demo",
+  "title": "Yuiti/Demo",
+  "description": "Demonstration block.",
+  "category": "common",
+  "icon": "list-view",
+  "keywords": [
+    "yuiti",
+    "gutenberg",
+    "demo"
+  ],
+  "attributes": {
+    "name": {
+      "type": "string",
+      "default": ""
+    }
+  }
+}

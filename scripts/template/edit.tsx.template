@@ -1,0 +1,23 @@
+const Edit = ({ attributes, setAttributes, ...props }) => {
+  /**
+   * Alias for setAttributes, so you can use it in a regular input file.
+   */
+  const updateAttribute = (name) => {
+    return (evt) => {
+      if (evt.preventDefault) evt.preventDefault();
+
+      const { value } = evt.currentTarget;
+
+      setAttributes({
+        [name]: value
+      });
+    };
+  };
+
+  return (
+    <div>
+    </div>
+  );
+};
+
+export default Edit;

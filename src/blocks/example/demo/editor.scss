@@ -1,0 +1,16 @@
+.yuiti_demo_input {
+  color: #909d9f;
+  background: rgba(0, 0, 0, .15);
+  border: 0;
+  width: 100%;
+  font-size: 2rem;
+  padding: 1rem;
+  display: block;
+  border-radius: .25rem;
+  transition: .3s;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 .25rem rgba(0, 0, 0, .25);
+  }
+}

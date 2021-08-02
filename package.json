@@ -1,0 +1,68 @@
+{
+  "name": "blokit",
+  "version": "0.0.1",
+  "description": "A block construction kit for the Gutenberg Block Editor, with a standalone app so you can test stuff.",
+  "main": "build/index.js",
+  "scripts": {
+    "start": "webpack serve --hot --inline --mode=development",
+    "build": "webpack build --mode=production",
+    "generate": "node scripts/generate.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuigoto/blokit.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yuigoto/blokit/issues"
+  },
+  "homepage": "https://github.com/yuigoto/blokit#readme",
+  "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/plugin-proposal-class-properties": "^7.14.5",
+    "@babel/plugin-transform-react-jsx": "^7.14.5",
+    "@babel/plugin-transform-runtime": "^7.14.5",
+    "@babel/preset-env": "^7.14.7",
+    "@babel/preset-react": "^7.14.5",
+    "@babel/preset-typescript": "^7.14.5",
+    "@fortawesome/fontawesome-free": "^5.15.3",
+    "@types/node": "^16.4.8",
+    "@types/react": "^17.0.15",
+    "@types/react-dom": "^17.0.9",
+    "@wordpress/block-editor": "^7.0.0",
+    "@wordpress/block-library": "^5.0.0",
+    "@wordpress/block-serialization-default-parser": "^4.2.1",
+    "@wordpress/blocks": "^11.0.0",
+    "@wordpress/components": "^15.0.0",
+    "@wordpress/data": "^6.0.0",
+    "@wordpress/element": "^4.0.0",
+    "@wordpress/format-library": "^3.0.0",
+    "@wordpress/i18n": "^4.2.1",
+    "autoprefixer": "^10.3.1",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-dynamic-import-node": "^2.3.3",
+    "copy-webpack-plugin": "^9.0.1",
+    "css-loader": "^6.1.0",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.3.2",
+    "mini-css-extract-plugin": "^2.1.0",
+    "postcss": "^8.3.5",
+    "postcss-loader": "^6.1.1",
+    "sanitize.css": "^12.0.1",
+    "sass": "^1.35.2",
+    "sass-loader": "^12.1.0",
+    "style-loader": "^3.1.0",
+    "tsconfig-paths-webpack-plugin": "^3.5.1",
+    "typescript": "^4.3.5",
+    "webpack": "^5.45.1",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-node-externals": "^3.0.0"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}

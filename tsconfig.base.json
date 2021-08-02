@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "*": ["src/*"],
+      "@blocks": ["src"],
+      "@blocks/*": ["src/*"],
+      "@docs": ["docs"],
+      "@docs/*": ["docs/*"]
+    },
+    "experimentalDecorators": true,
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": false,
+    "esModuleInterop": true,
+    "declaration": true,
+    "declarationDir": "build",
+    "module": "ESNext",
+    "target": "ESNext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": false,
+    "noImplicitAny": false,
+    "jsx": "preserve"
+  },
+  "files": [
+    "./global.d.ts"
+  ],
+  "exclude": [
+    "./src/**/*.spec.ts",
+    "node_modules"
+  ]
+}
